@@ -1,0 +1,62 @@
+#{$CLVersion} #{$globalPrefix}_custom_overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
+        min-width: 160px;
+        background-color: var(--palette-hub-colors-surface-surface2);
+        border-radius: 8px;
+        padding: 0 16px;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 15%;
+
+        svg {
+            width: 28px;
+            height: 28px;
+            display: block;
+            margin-bottom: spacing(1);
+            margin-right: spacing(2.5);
+        }
+
+        &.progress {
+            color: var(--palette-hub-colors-on-surface-disabled);
+
+            svg {
+                animation: spinner 3s linear infinite;
+
+                path {
+                    fill: var(--palette-hub-colors-on-surface-disabled);
+                }
+            }
+        }
+
+        &.error {
+            color: var(--palette-hub-colors-on-surface-deemphasised);
+        }
+
+        .primary-section {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+
+        .secondary-section {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        &.no-trades {
+            padding: 16px;
+        }
+    }
+
+    @keyframes spinner {
+        to {
+            transform: rotate(360deg);
+        }
+    }
