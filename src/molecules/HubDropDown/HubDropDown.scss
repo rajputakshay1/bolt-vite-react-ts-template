@@ -1,0 +1,103 @@
+#{$CLVersion} {
+    #{$globalPrefix} {
+        &_drop_down {
+            margin-bottom: 24px;
+            & .MuiFormHelperText-root {
+                color: var(--palette-hub-colors-on-surface-deemphasised);
+            }
+            & .MuiInput-underline:before {
+                // normal stage
+                border-bottom-color: var(--palette-hub-colors-grey-grey3);
+                height: 36px;
+            }
+            & .MuiInput-underline:hover:before {
+                // on hover
+                border-bottom: 1px solid var(--palette-grey-grey3);
+                transition: none;
+                height: 36px;
+            }
+            & .MuiInput-underline:after {
+                // on focus
+                border-bottom: 1px solid var(--palette-primary-light2);
+                transition: none;
+                height: 36px;
+            }
+            & .MuiButton-text {
+                box-sizing: border-box;
+                border-radius: 20px;
+                padding: 5px 15px;
+                &.Mui-disabled {
+                    background-color: var(--palette-hub-colors-surface-default);
+                    &.MuiButton-textPrimary {
+                        color: var(--palette-hub-colors-on-surface-disabled);
+                    }
+                }
+            }
+            & .MuiButton-startIcon {
+                margin-right: 7px;
+            }
+            & .MuiSelect-iconOpen {
+                transform: rotateX(180deg);
+            }
+            &.hub-no-bottom-margin {
+                padding-left: 2px;
+                padding-bottom: 2px;
+                margin-bottom: 0px;
+            }
+        }
+        &_select {
+            &:hover:not(.Mui-focused):not(&.Mui-disabled) {
+                background: var(--palette-grey-grey1);
+                box-shadow: -6px 0px 0px 0px var(--palette-grey-grey1),
+                    6px 0px 0px 0px var(--palette-grey-grey1);
+                border-radius: 6px;
+            }
+            &.Mui-focused {
+                background-color: var(--palette-grey-grey2);
+                box-shadow: -6px 0px 0px 0px var(--palette-grey-grey2),
+                    6px 0px 0px 0px var(--palette-grey-grey2);
+                border-radius: 6px;
+            }
+        }
+        &_form_helper_text {
+            &,
+            &.Mui-focused {
+                color: var(--palette-text-on-surface-deemphasised);
+            }
+            &.MuiInputLabel-shrink {
+                transform: scale(1);
+            }
+            .MuiTypography-root {
+                color: var(--palette-text-on-surface-deemphasised);
+            }
+        }
+        &_menu_item {
+            height: 36px;
+            &:hover {
+                background-color: var(--palette-grey-grey1) !important;
+            }
+            &:focus {
+                background: var(--palette-common-white);
+            }
+            &.Mui-selected {
+                background: var(--palette-common-white);
+            }
+        }
+        &_drop_down_icon {
+            min-width: spacing(8);
+            padding-top: 6px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &_icon_with_value{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .MuiSelect-select:focus {
+        background: none;
+    }
+}
