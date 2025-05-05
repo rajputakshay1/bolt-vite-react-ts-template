@@ -1,0 +1,103 @@
+@import 'react-day-picker/dist/style';
+
+#{$CLVersion} #{$globalPrefix} {
+    &_date_picker {
+        background-color: var(--palette-hub-colors-surface-default);
+        max-height: 700px;
+        overflow: hidden;
+
+        margin: 0px;
+        padding: 16px;
+        transition: max-height 0.1s ease-out; // note that we're transitioning max-height, not height!
+        height: auto;
+
+        &_month-year-overlay-active {
+            max-height: 280px;
+            transition: max-height 0.1s ease-out; // note that we're transitioning max-height, not height!
+        }
+
+        .rd .rdp-button {
+            border: 0px;
+        }
+
+        .rdp-caption > div {
+            button:disabled {
+                color: var(--palette-text-on-surface-deemphasised);
+                font-weight: 600;
+            }
+        }
+
+        .MuiFab-root {
+            box-shadow: none;
+            &:hover {
+                background-color: var(--palette-hub-colors-surface-surface3);
+            }
+        }
+
+        .MuiFab-root.Mui-disabled {
+            background-color: transparent;
+            opacity: 0.4;
+        }
+
+        .day-wrapper_range_end {
+            background-color: var(--palette-hub-colors-surface-surface3);
+            border-bottom-left-radius: 100%;
+            border-top-left-radius: 100%;
+
+            .rdp-day {
+                border-radius: 100%;
+            }
+        }
+
+        .day-wrapper_range_start {
+            background-color: var(--palette-hub-colors-surface-surface3);
+            border-bottom-right-radius: 100%;
+            border-top-right-radius: 100%;
+
+            .rdp-day {
+                border-radius: 100%;
+            }
+        }
+        .rdp-day_range_end .rdp-day_range_start {
+            border-radius: 50%;
+        }
+
+        .rdp-day_selected:first-child .rdp-day_selected:last-child {
+            border-radius: 50%;
+        }
+        .months-popup,
+        .years-popup {
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+            max-height: 280px;
+
+            &-header {
+                height: 70px;
+                display: flex;
+                background-color: var(--palette-hub-colors-surface-default);
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+            }
+        }
+
+        .months-list,
+        .years-list {
+            background-color: var(--palette-hub-colors-surface-default);
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            grid-gap: 10px;
+            row-gap: 15px;
+            overflow: auto;
+            height: 100%;
+            max-height: 220px;
+        }
+    }
+}
