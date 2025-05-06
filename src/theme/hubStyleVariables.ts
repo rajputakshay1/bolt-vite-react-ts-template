@@ -1,0 +1,193 @@
+import { rgbToHex } from '@mui/material';
+export interface HubColorsProps {
+    [key: string]: {
+        [key: string]: string;
+    };
+}
+
+export const hubColors: HubColorsProps = {
+    primary: {
+        default: '#2B5B73',
+        dark1: '#17475E',
+        dark2: '#033249',
+        darker: '#011221',
+        light1: '#3D6F8C',
+        light2: '#4D80A0',
+    },
+    secondary: {
+        '-5': '#EFEAF1',
+        '-4': '#CDBDD4',
+        '-3': '#B59DBF',
+        '-2': '#9371A1',
+        '-1': '#7E558F',
+        0: '#5E2B73',
+        '+1': '#562769',
+        '+2': '#431f52',
+        '+3': '#34183f',
+        '+4': '#271230',
+    },
+    grey: {
+        grey1: rgbToHex('rgba(3, 50, 73, 0.06)'),
+        grey2: rgbToHex('rgba(3, 50, 73, 0.12)'),
+        grey3: rgbToHex('rgba(3, 50, 73, 0.24)'),
+        grey4: rgbToHex('rgba(3, 50, 73, 0.36)'),
+    },
+    surface: {
+        default: '#FFFFFF',
+        surface1: '#F9FAFB',
+        surface2: '#F3F5F7',
+        surface3: '#E6EBEF',
+    },
+    red: {
+        default: '#BB3A00',
+        dark1: '#AA2F00',
+        light1: '#C75219',
+    },
+    yellow: {
+        default: '#E9B000',
+        dark1: '#D79700',
+        light1: '#EDBE19',
+    },
+    blue: {
+        default: rgbToHex('rgba(11,52,102)'),
+        deemphasised: rgbToHex('rgba(135, 174, 222, 0.2)'),
+        highlighted: rgbToHex('rgba(77, 128, 160, 0.1)'),
+    },
+    green: {
+        default: '#829E21',
+        deemphasised: rgbToHex('rgba(130, 158, 33, 0.20)'),
+        dark1: '#73901A',
+        light1: '#96AE3A',
+    },
+    onSurface: {
+        default: '#011221',
+        deemphasised: rgbToHex('rgba(1, 18, 33, 0.68)'),
+        disabled: rgbToHex('rgba(1, 18, 33, 0.36)'),
+        emphasised: '#3D6F8C',
+        red: '#BB3A00',
+        yellow: '#C57B00',
+        green: '#5C7A10',
+    },
+    onPrimary: {
+        default: '#FFFFFF',
+        deemphasised: '#FFFFFFB8',
+        disabled: '#FFFFFF61',
+    },
+    // V2 color pallete start
+    // for values using +, access with string plus instead of + since special characters are not allowed in css variable
+    // eg: --palette-hub-colors-primary-blue--plus4
+    neutralGrey: {
+        0: '#FFFFFF',
+        1: '#FAFAFB',
+        2: '#F5F6F7',
+        3: '#EBEDF0',
+        4: '#D0D5DC',
+        5: '#B8BBC1',
+        6: '#58616F',
+        7: '#30343B',
+        8: '#232529',
+        9: '#1C1C1C',
+    },
+    primaryBlue: {
+        '-5': '#D1DDE5',
+        '-4': '#A2BCCD',
+        '-3': '#7CA3BC',
+        '-2': '#4D80A0',
+        '-1': '#3D6F8C',
+        0: '#2B5B73',
+        '+1': '#17475E',
+        '+2': '#033249',
+    },
+    errorRed: {
+        '-5': '#F7EEEE',
+        '-4': '#FADBD9',
+        '-3': '#FAB9B4',
+        '-2': '#FC9086',
+        '-1': '#DB6961',
+        0: '#C4281C',
+        '+1': '#A1170C',
+        '+2': '#761109',
+        '+3': '#5A0D07',
+        '+4': '#320501',
+    },
+    warningYellow: {
+        '-5': '#FCF3D9',
+        '-4': '#F7E1A1',
+        '-3': '#EFD37B',
+        '-2': '#EBC756',
+        '-1': '#D8A918',
+        0: '#8C6908',
+        '+1': '#4B3907',
+        '+2': '#4B3907',
+        '+3': '#372A06',
+        '+4': '#1F1700',
+    },
+    successGreen: {
+        '-5': '#EDF7DF',
+        '-4': '#D4EAB3',
+        '-3': '#B0D873',
+        '-2': '#B0D873',
+        '-1': '#72A02C',
+        0: '#557821',
+        '+1': '#41591D',
+        '+2': '#304115',
+        '+3': '#242F14',
+        '+4': '#13190B',
+    },
+    brick: {
+        '-5': '#FEEFEC',
+        '-4': '#FCDCD5',
+        '-3': '#F6BBAC',
+        '-2': '#F09A84',
+        '-1': '#DF6B4E',
+        0: '#B54326',
+        '+1': '#893925',
+        '+2': '#692717',
+        '+3': '#50190B',
+        '+4': '#240F0A',
+    },
+    sapphire: {
+        '-5': '#F0F5F5',
+        '-4': '#D9E6E7',
+        '-3': '#B8CFD1',
+        '-2': '#94B5B7',
+        '-1': '#6C9699',
+        0: '#4E7679',
+        '+1': '#34585A',
+        '+2': '#224244',
+        '+3': '#153032',
+        '+4': '#0F191A',
+    },
+    cobaltBlue: {
+        '-5': '#ECF4FE',
+        '-4': '#D0E3FB',
+        '-3': '#ACCCF6',
+        '-2': '#83B1EC',
+        '-1': '#538FDF',
+        0: '#246CC6',
+        '+1': '#26528D',
+        '+2': '#183D6D',
+        '+3': '#112C50',
+        '+4': '#04172F',
+    },
+    purple: {
+        '-5': '#F7F1F9',
+        '-4': '#E9DDEE',
+        '-3': '#D8C3DF',
+        '-2': '#C4A5CF',
+        '-1': '#A97EB9',
+        0: '#9B4CB8',
+        '+1': '#6C427A',
+        '+2': '#4F2F5B',
+        '+3': '#3B2244',
+        '+4': '#1E1023',
+    },
+    black: {
+        0: "#000000",
+    }
+    // V2 color pallete end
+};
+
+export const hubSizes = {
+    inputHeight: '36px',
+};
